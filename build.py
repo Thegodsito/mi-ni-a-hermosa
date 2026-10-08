@@ -1,4 +1,3 @@
-"""Genera index.html con rutas relativas limpias para GitHub. Ejecuta: python build.py"""
 from html import escape as e
 from pathlib import Path
 
@@ -8,11 +7,11 @@ BASE_DIR = Path(__file__).parent
 NOMBRE = "Para ti"
 FRASE = "Hay personas que hacen que todo se sienta más suave."
 
-# Puedes cambiar el orden aquí si quieres mover la foto1.png a otro lado:
+# Rutas apuntando directamente a las imágenes sueltas en la raíz (.jpg)
 FOTOS = [
-    ("foto/foto2.png", "Tu calma"),
-    ("foto/foto1.png", "Tu color"),    # <--- Aquí está foto1 en el centro (puedes cambiarla de posición)
-    ("foto/foto3.png", "Tu sonrisa"),
+    ("foto2.jpg", "Tu calma"),
+    ("foto1.jpg", "Tu color"),
+    ("foto3.jpg", "Tu sonrisa"),
 ]
 
 CARTA_TITULO = "Para ti, con todo lo que no cabe en un mensaje"
@@ -34,7 +33,7 @@ RAZONES = [
 ]
 ABRE = [
     ("tengas un mal día", "Respira. Has sobrevivido a todos tus días malos hasta hoy, y este también pasa. Mientras tanto, estoy aquí. Un abrazo enorme."),
-    ("dudes de ti", "Mírate como te miro yo: alguien con luz propia, valiente y preciosa. Si dudas, ven y te lo repito las veces que haga falta."),
+    ("dudes de ti", "Mírate como te miro yo: alguien con luz propia, valiente y preciosa. Si dudas, ven y te lo repito las veces que hace falta."),
     ("quieras sonreír", "Acuérdate de la última vez que os reísteis sin poder parar. Eso, exactamente eso, es lo que quiero repetir contigo."),
 ]
 FINAL = ("Gracias por ser tú.", 'Esta página es tuya. Ábrela las veces que quieras.')
