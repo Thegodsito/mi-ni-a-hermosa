@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para ti</title>
+<meta name="theme-color" content="#f8f1f3"><meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--perla:#f8f1f3;--rosa:#ecc9d0;--lila:#d3cae6;--salvia:#c3d0c1;--ciruela:#4b3547;--suave:#7d6578;--papel:#fffafb}
+*{box-sizing:border-box;margin:0}
+::selection{background:var(--rosa)}
+html{scroll-behavior:smooth}
+body{background:var(--perla);color:var(--ciruela);font:400 1.05rem/1.7 Figtree,system-ui,sans-serif;overflow-x:hidden;position:relative}
+.nube{position:fixed;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.55;animation:flota 28s ease-in-out infinite alternate}
+.n1{width:34rem;height:34rem;background:var(--rosa);top:-8rem;right:-8rem}
+.n2{width:30rem;height:30rem;background:var(--lila);bottom:5%;left:-10rem;animation-delay:-9s}
+.n3{width:22rem;height:22rem;background:var(--salvia);top:45%;right:-6rem;opacity:.35;animation-delay:-17s}
+@keyframes flota{to{transform:translate(-3rem,4rem) scale(1.12)}}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:350;line-height:1.1}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-style:italic;text-align:center;margin-bottom:2rem}
+.wrap{max-width:62rem;margin:auto;padding:0 1.5rem}
+section{padding:4.5rem 0;position:relative}
+section+section::before{content:"";display:block;width:.8rem;height:1.1rem;margin:0 auto 3.5rem;border-radius:100% 0 100% 0;background:var(--rosa);box-shadow:1.4rem .4rem 0 -.15rem var(--lila),-1.4rem .4rem 0 -.15rem var(--salvia);transform:rotate(-15deg)}
+.hero{text-align:center;padding:4rem 0 3rem}
+.hero h1{font-size:clamp(3rem,9vw,6.5rem);font-style:italic;letter-spacing:-.025em}
+.hero>p{margin:1rem auto 3rem;max-width:30rem;color:var(--suave);font-size:1.15rem}
+.tri{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:clamp(.6rem,2.5vw,1.8rem);align-items:end;max-width:50rem;margin:auto}
+.arco{aspect-ratio:3/4.2;border-radius:999px 999px 1rem 1rem;overflow:hidden;background:var(--lila)}
+.a2 .arco{aspect-ratio:3/4.9}
+.a1 .arco{box-shadow:0 0 0 .4rem var(--perla),0 0 0 .5rem var(--lila)}
+.a2 .arco{box-shadow:0 0 0 .4rem var(--perla),0 0 0 .5rem var(--rosa)}
+.a3 .arco{box-shadow:0 0 0 .4rem var(--perla),0 0 0 .5rem var(--salvia)}
+.a{transition:transform .5s cubic-bezier(.2,.7,.2,1)}.a:hover{transform:translateY(-.5rem) rotate(-1deg)}
+.arco img{transition:transform .8s}.a:hover .arco img{transform:scale(1.04)}
+.arco img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+figcaption{margin-top:1.1rem;font:italic 1.15rem Fraunces,serif;color:var(--suave)}
+.tri{animation:entra 1.8s ease both}
+@keyframes entra{from{opacity:0;transform:translateY(1.2rem)}}
+.carta{max-width:38rem;margin:auto;background:var(--papel);border:1px solid var(--rosa);border-radius:1.2rem;padding:clamp(1.6rem,5vw,3rem);box-shadow:0 1.5rem 3rem -1.8rem #b88ca066}
+.carta::before{content:"";display:block;width:3.2rem;height:.25rem;border-radius:9px;background:linear-gradient(90deg,var(--rosa),var(--lila),var(--salvia));margin-bottom:1.6rem}
+.carta h2{text-align:left;font-size:clamp(1.5rem,3.5vw,2rem)}
+.carta p{font:1.15rem/1.85 Fraunces,serif}
+.carta p+p{margin-top:1.1rem}
+.firma{font:1.9rem Caveat,cursive!important;color:var(--suave);margin-top:1.8rem!important;text-align:right}
+.razones{list-style:none;padding:0;max-width:36rem;margin:auto}
+.razones li{font:italic 1.35rem/1.5 Fraunces,serif;padding:1.1rem 0;border-bottom:1px solid var(--rosa);text-align:center}
+.razones li:last-child{border:0}
+.razones li{transition:color .3s,letter-spacing .3s}.razones li:hover{color:var(--suave);letter-spacing:.01em}
+.sobres{max-width:36rem;margin:auto;display:grid;gap:.9rem}
+.sobre{background:var(--papel);border:1px solid var(--lila);border-radius:999px;padding:.9rem 1.6rem;transition:border-radius .3s}
+.sobre[open]{border-radius:1.4rem}
+.sobre summary{cursor:pointer;font:italic 1.2rem Fraunces,serif;list-style:none;text-align:center}
+.sobre summary::-webkit-details-marker{display:none}
+.sobre p{margin-top:.8rem;text-align:center;color:var(--suave);animation:abre .5s ease}
+@keyframes abre{from{opacity:0;transform:translateY(-.4rem)}}
+.sobre summary:hover{color:var(--suave)}
+summary:focus-visible,button:focus-visible{outline:2px solid var(--suave);outline-offset:4px;border-radius:999px}
+.fin{text-align:center;padding-bottom:7rem}
+.fin button{font:italic 1.3rem Fraunces,serif;color:var(--ciruela);background:var(--rosa);border:0;border-radius:999px;padding:.9rem 2.4rem;cursor:pointer;transition:background .3s}
+.fin button:hover{background:var(--lila)}.fin button:active{transform:scale(.97)}
+.msg{display:none;margin-top:2rem}
+.msg.on{display:block}
+.msg h2{margin-bottom:.6rem}
+.msg p{color:var(--suave)}
+.petalo{position:fixed;top:-2rem;width:.9rem;height:1.2rem;border-radius:100% 0 100% 0;opacity:.85;pointer-events:none;animation:cae linear forwards;z-index:5}
+@keyframes cae{to{transform:translate(var(--dx),110vh) rotate(var(--r))}}
+@media(max-width:560px){figcaption{font-size:.95rem}.carta p{font-size:1.05rem}}
+@media(prefers-reduced-motion:reduce){.nube,.tri,.sobre p{animation:none}.a,.a:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="nube n1"></div><div class="nube n2"></div><div class="nube n3"></div>
+<main class="wrap">
+<header class="hero">
+    <h1>Para ti</h1>
+    <p>Hay personas que hacen que todo se sienta más suave.</p>
+    <div class="tri">
+        <figure class="a a1"><div class="arco"><img src="foto/foto2.png" alt="Tu calma"></div><figcaption>Tu calma</figcaption></figure>
+        <figure class="a a2"><div class="arco"><img src="foto/foto1.png" alt="Tu color"></div><figcaption>Tu color</figcaption></figure>
+        <figure class="a a3"><div class="arco"><img src="foto/foto3.png" alt="Tu sonrisa"></div><figcaption>Tu sonrisa</figcaption></figure>
+    </div>
+</header>
+<section>
+    <article class="carta">
+        <h2>Para ti, con todo lo que no cabe en un mensaje</h2>
+        <p>Hice esta página porque a veces un «gracias» o un «qué guapa» se queda corto, y quería que lo que siento por ti tuviera un lugar donde quedarse.</p>
+        <p>Me fascina que puedas ser tantas versiones y siempre seas tú: el pelo oscuro con mechones claros, el burdeos que te queda como si lo hubieras inventado, el gorro lleno de nieve y esa cara de «no me hables hasta que se me quite el frío». Cambias de color y de abrigo, pero esa forma de mirar no cambia nunca.</p>
+        <p>Tienes una calma que se contagia. Contigo los días raros pesan menos y los buenos se sienten más grandes. No sé exactamente cuándo pasó, pero ahora no me imagino los míos sin tu risa de fondo.</p>
+        <p>Quiero que sepas que no hace falta que seas fuerte todo el tiempo, ni divertida, ni perfecta. Con que seas tú me basta, y me sobra. Aquí tienes a alguien que se queda.</p>
+        <p>Gracias por existir tal cual eres. Eres, de lejos, lo más bonito que me ha pasado este año.</p>
+        <p class="firma">Con todo mi cariño</p>
+    </article>
+</section>
+<section>
+    <h2>Lo que me encanta de ti</h2>
+    <ul class="razones">
+        <li>Tu risa, que llega antes que el chiste.</li>
+        <li>Cómo cuidas de los demás aunque no lo digas.</li>
+        <li>Esa mirada de medio lado cuando sabes algo que yo no.</li>
+        <li>Que seas igual de bonita con gafas, con gorro o recién despertada.</li>
+        <li>Tu forma de convertir un plan cualquiera en lo mejor del día.</li>
+        <li>Que seas auténtica, sin filtros ni disfraz.</li>
+    </ul>
+</section>
+<section>
+    <h2>Guárdalas para cuando las necesites</h2>
+    <div class="sobres">
+        <details class="sobre"><summary>Abre cuando tengas un mal día</summary><p>Respira. Has sobrevivido a todos tus días malos hasta hoy, y este también pasa. Mientras tanto, estoy aquí. Un abrazo enorme.</p></details>
+        <details class="sobre"><summary>Abre cuando dudes de ti</summary><p>Mírate como te miro yo: alguien con luz propia, valiente y preciosa. Si dudas, ven y te lo repito las veces que haga falta.</p></details>
+        <details class="sobre"><summary>Abre cuando quieras sonreír</summary><p>Acuérdate de la última vez que os reísteis sin poder parar. Eso, exactamente eso, es lo que quiero repetir contigo.</p></details>
+    </div>
+</section>
+<section class="fin">
+    <button id="btn">Una cosa más</button>
+    <div class="msg" id="msg" aria-live="polite">
+        <h2>Gracias por ser tú.</h2>
+        <p>Esta página es tuya. Ábrela las veces que quieras. <a href="regalo2.html" style="color:var(--suave); text-decoration:underline;">Ver la segunda parte</a></p>
+    </div>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);$('btn').onclick=()=>{$('msg').classList.add('on');$('msg').scrollIntoView({behavior:'smooth',block:'center'});
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const c=['#ecc9d0','#d3cae6','#c3d0c1','#f4dde2'];
+for(let i=0;i<36;i++){const p=document.createElement('span');p.className='petalo';
+p.style.cssText=`left:${Math.random()*100}vw;background:${c[i%4]};--dx:${Math.random()*10-5}rem;--r:${Math.random()*720}deg;animation-duration:${4+Math.random()*4}s;animation-delay:${Math.random()*1.5}s`;
+document.body.appendChild(p);setTimeout(()=>p.remove(),10500)}};
+</script>
+</body>
+</html>
