@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).parent
 NOMBRE = "Para ti"
 FRASE = "Hay personas que hacen que todo se sienta más suave."
 
-# Rutas apuntando directamente a las imágenes sueltas en la raíz (.jpg)
+# Rutas apuntando directamente a las imágenes sueltas .jpg
 FOTOS = [
     ("foto2.jpg", "Tu calma"),
     ("foto1.jpg", "Tu color"),
